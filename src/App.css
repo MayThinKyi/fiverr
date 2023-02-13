@@ -6,3 +6,6 @@ body{
     padding:0;
     font-family: 'Roboto', sans-serif;
 }
+.activeNavbar{
+    transition: 5s all ease;
+}

@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Navbar = () => {
+    const [active,setActive]=useState(false);
+    const isActive=()=>{
+        window.addEventListener('scroll',()=>{
+            window.scrollY>0? setActive(true) :setActive(false);
+        })
+    }
+    useEffect(()=>{
+        isActive();
+    },[])
   return (
-    <div class='bg-[#113119] text-white py-5 px-20 navbar flex justify-between items-center'>
+   <div className='sticky top-0'>
+     <div class='bg-[#113119] text-white py-5 px-20 navbar flex justify-between items-center'>
         <div className='flex items-center'>
             <span className='lg:text-4xl font-bold'>fiverr</span>
             <span className='lg:text-4xl text-green-500 font-bold'>.</span>
@@ -18,6 +28,20 @@ const Navbar = () => {
             </ul>
         </div>
     </div>
+    <hr></hr>
+    {active && 
+     <ul className={active ? 'activeNavbar bg-white  py-2 border-y gap-2 border-bottom px-20 text-[#74767e] font-[350] text-[16px]  flex justify-between items-center' :'bg-white  py-2 border-y gap-2 border-bottom px-20 text-[#74767e] font-[350] text-[16px]  flex justify-between items-center'}>
+     <li>Graphics & Design</li>
+     <li>Graphics & Design</li>
+     <li>Graphics & Design</li>
+     <li>Graphics & Design</li>
+     <li>Graphics & Design</li>
+     <li>Graphics & Design</li>
+     <li>Graphics & Design</li>
+     <li>Graphics & Design</li>
+     </ul>}
+   
+   </div>
   )
 }
 
