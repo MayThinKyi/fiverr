@@ -5,9 +5,15 @@ body{
     margin: 0;
     padding:0;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden !important;
 }
 .activeNavbar{
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
     transition: 5s all ease;
+    z-index: 999 ;
 }
 .dropdownItem{
     position: absolute;
@@ -42,3 +48,98 @@ input{
 .trusted img{
     height: 100px;
 }
+.slider{
+    position:relative;
+
+}
+.slider img{
+    max-height: 335px;
+    border-radius: 8px;
+}
+.sliderContent{
+    z-index: 100;
+    color:#fff;
+    position:absolute;
+    top: 20px;
+    left: 15px;
+}
+.carousel-track{
+  
+    align-items: center !important;
+}
+.carousel-prev,.carousel-next{
+   position: absolute !important;
+   top: 40% !important;
+    width: 50px !important;
+    height: 50px !important;
+    background-color: #fff !important;
+    border-radius: 50% !important;
+}
+.companyImg{
+    height: 45px;
+}
+.logoMaker{
+    background: #446ee7;
+    position: relative;
+
+}
+.logoMaker img{
+    height: 350px;
+    width: 100%;
+}
+.logoMakerContent{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+
+}
+.talent{
+    background: #53192A;
+    position: relative;
+}
+.talentContent{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+@media screen and (max-width:913px) {
+    .featured{
+        height: 45vh;
+       
+    }
+}
+@media screen and (max-width:500px){
+    .talent  img{
+        height: 420px;
+        object-fit: contain;
+
+    }
+}
+@media screen and (max-width:500px) {
+    .talent  img{
+        height: 300px;
+        object-fit: contain;
+
+    }
+    .logoMaker img{
+        object-fit: contain;
+    }
+    .featured{
+        height: 70vh;
+    }
+    .trusted img{
+        height: 60px;
+    }
+    .slider img {
+        height: 335px;
+        width: 100%;
+    }
+    .carousel-prev,.carousel-next{
+         background-color: rgb(221, 219, 219) !important;
+     }
+     .companyImg{
+        height: 40px;
+    }
+}
+
+

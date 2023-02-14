@@ -23,7 +23,7 @@ const Navbar = () => {
         isActive();
     },[])
   return (
-   <div className='bg-[#003C1A] sticky top-0'>
+   <div className='bg-[#003C1A] overflow-x-hidden sticky top-0'>
      <div className=' text-white py-5 px-20 navbar flex justify-between items-center'>
         <div className='flex items-center'>
             <span className='lg:text-4xl font-bold'>fiverr</span>
@@ -109,7 +109,7 @@ const Navbar = () => {
     </div>
     
     {active && <><hr></hr>
-     <ul className={active ? 'activeNavbar bg-white  py-2 border-y gap-2 border-bottom px-5 text-[#74767e] font-[350] text-[16px]  flex justify-between items-center cursor-pointer' :'bg-white cursor-pointer  py-2 border-y gap-2 border-bottom px-20 text-[#74767e] font-[350] text-[16px]  flex justify-between items-center'}>
+     <ul className={active ? 'activeNavbar bg-white  py-2 border-y gap-2 border-bottom px-5 text-[#74767e] font-[350] text-[16px]  flex justify-between items-center cursor-pointer z-9999' :'bg-white cursor-pointer  z-9999 py-2 border-y gap-2 border-bottom px-20 text-[#74767e] font-[350] text-[16px]  flex justify-between items-center'}>
      <li>Graphics & Design</li>
      <li>Digital Marketing</li>
      <li>Writing & Translation</li>
