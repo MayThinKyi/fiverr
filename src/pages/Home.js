@@ -27,7 +27,7 @@ const Home = () => {
        <FreelancerProjects/>
        <Guides/>
        <Talent/>
-       <Footer/>
+      
     </div>
   )
 }

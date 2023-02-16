@@ -7,6 +7,9 @@ body{
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden !important;
 }
+table tr:nth-child(even){
+    background: #F1FAF6;
+}
 .activeNavbar{
     position: fixed;
     top: 70px;
@@ -37,9 +40,9 @@ body{
     color: gray;
     font-size: 20px;
 }
-input{
+input,select{
     outline: none;
-    border: none;
+   
 }
 .featuredInputContainer button{
     border-top-right-radius: 5px;
